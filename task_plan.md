@@ -3,7 +3,7 @@
 **Constituição:** `cursor.md`  
 **Protocolo:** `protocolo_vlaeg.md`  
 **Status:** V + L + A (app) + E (UI) feitos.  
-**Passo atual:** 2 — Repositório Git (ainda não existe). Destino: produção.  
+**Passo atual:** 3 — Você importa o repo na Vercel (sua conta) e aponta o DNS.  
 **Modo:** um passo de cada vez. Sem UI nova.
 
 ---
@@ -43,8 +43,8 @@ Caderno de processos. Auth editar / público ver. Só Supabase. `processos.neryt
 - [x] POP `architecture/app-minimo.md` + app em `web/`
 - [x] `schema-multiuser.sql` no ar (`profiles` + `pages.owner_id` HTTP 200)
 - [x] **1.** Auth dashboard (você: pronto). Login local fica pra depois.
-- [ ] **2.** Git + GitHub — AGORA
-- [ ] **3.** Vercel no ar (url `*.vercel.app`)
+- [x] **2.** Git + GitHub — `https://github.com/nerytechz/processos` (owner: nerytechz)
+- [ ] **3.** Vercel + DNS — AGORA (você; não a Cursor)
 - [ ] **4.** Auth do Supabase apontando pro site publicado (não localhost)
 - [ ] **5.** Domínio `processos.nerytech.com.br`
 - [ ] **6.** Signup público off depois do 1º editor

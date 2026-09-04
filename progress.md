@@ -113,3 +113,10 @@
 - Você: Auth dashboard pronto. Login no localhost adiado.
 - Sem pasta `.git` ainda.
 - Passo **2**: criar Git + mandar pro GitHub. Sem isso a Vercel não publica.
+
+## 2026-09-04 — GitHub na conta do dono
+
+- Repo: https://github.com/nerytechz/processos (`main`). Owner `nerytechz`. Collaborator só ele.
+- Autor do commit: Joao Nery. `.env` fora do git.
+- Lei: `architecture/deploy.md` + `.cursor/rules/deploy-ownership.mdc`.
+- Sem `vercel` por agente. Passo 3: dono importa na Vercel + CNAME no registro.br.
