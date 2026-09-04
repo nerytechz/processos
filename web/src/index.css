@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --background: #0c0612;
+  --surface: #1a0d28;
+  --primary: #7b61ff;
+  --danger: #ff2d6b;
+  --warning: #e8c547;
+  --foreground: #ede9f8;
+  --muted: #9b8fbf;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Geist, system-ui, sans-serif;
+}
+
+.neural-field {
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0.875rem 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--primary) 28%, transparent);
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: border-color 0.2s ease;
+}
+.neural-field::placeholder {
+  color: var(--muted);
+  opacity: 0.9;
+}
+.neural-field:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.field {
+  width: 100%;
+  margin-top: 0.25rem;
+  border-radius: 1rem;
+  padding: 0.875rem 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--primary) 28%, transparent);
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: border-color 0.2s ease;
+}
+.field::placeholder {
+  color: var(--muted);
+  opacity: 0.9;
+}
+.field:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.glitch::before {
+  color: #ff2d6b;
+  animation: glitch-clip-1 4s infinite;
+}
+.glitch::after {
+  color: #7b61ff;
+  animation: glitch-clip-2 4s infinite;
+  animation-delay: -2s;
+}
+
+@keyframes glitch-clip-1 {
+  0%, 88%, 100% { opacity: 0; clip-path: inset(50% 0 50% 0); }
+  89% { opacity: 0.9; clip-path: inset(10% 0 70% 0); transform: translate(-3px, 0); }
+  90% { opacity: 0.9; clip-path: inset(60% 0 20% 0); transform: translate(3px, 0); }
+  91% { opacity: 0.9; clip-path: inset(30% 0 50% 0); transform: translate(-2px, 0); }
+  92% { opacity: 0; }
+}
+
+@keyframes glitch-clip-2 {
+  0%, 91%, 100% { opacity: 0; clip-path: inset(50% 0 50% 0); }
+  92% { opacity: 0.8; clip-path: inset(70% 0 10% 0); transform: translate(3px, 0); }
+  93% { opacity: 0.8; clip-path: inset(20% 0 60% 0); transform: translate(-3px, 0); }
+  94% { opacity: 0; }
+}
+
+@keyframes nav-scan {
+  from { background-position: 120% 0; }
+  to { background-position: -120% 0; }
+}
+.nav-scan {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary),
+    var(--danger),
+    var(--primary),
+    transparent
+  );
+  background-size: 45% 100%;
+  background-repeat: no-repeat;
+  animation: nav-scan 3.5s linear infinite;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+@keyframes nav-ember-pulse {
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 1; }
+  50% { transform: translateX(-50%) scale(1.6); opacity: 0.55; }
+}
+.nav-ember {
+  animation: nav-ember-pulse 1.6s ease-in-out infinite;
+}
+
+.kicker {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+audio.deck {
+  width: 100%;
+  height: 36px;
+  color-scheme: dark;
+  accent-color: #7b61ff;
+}

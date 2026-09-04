@@ -1,0 +1,13 @@
+---
+description: Deploy e GitHub só na conta do dono — Cursor nunca é criador nem colaborador
+alwaysApply: true
+---
+
+# Titularidade (GitHub / Vercel / domínio)
+
+- Dono e único colaborador: o humano do repo (conta GitHub/Vercel dele).
+- Proibido: criar repo em conta da Cursor; adicionar `cursor`, bot da Cursor ou e-mail de agente como collaborator, owner ou team.
+- Proibido: `vercel` login / `vercel --yes` / ligar projeto Vercel com identidade da Cursor.
+- Commit: autor = `git config` local do dono. Não alterar `user.name` / `user.email`. Não forçar autor Cursor.
+- Remote: só `github.com/<usuario-do-dono>/...`. Proibido `origin.cursor.com` como dono do produto.
+- Depois do `git push` na conta dele: orientar o dono a importar o repo na **Vercel dele** e o DNS no registro.br. Agente não “é” o publisher.
